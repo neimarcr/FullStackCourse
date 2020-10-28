@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style type="text/css">
+     label{
+      width: 100%;
+      padding: 5px;
+     }
+     input {
+      padding: 5px;
+     }
+     div {
+      margin-bottom: 10px;
+     }
+  </style>
+</head>
+<body>
+
+  <form name="formularioCadastro" action="/action_page.php" onsubmit="return validateForm()" method="post">
+
+    <label>Nome:<label>
+    <div><input type="text" name="nome" /></div>
+
+    <label>Idade:<label>
+    <div><input type="text" name="idade"  /></div>
+
+    <label>E-mail:<label>
+    <div><input type="text" name="email" placeholder="nome@email.com"/></div>
+
+    <label>Telefone:<label>
+    <div><input type="text" name="telefone" placeholder="Digite apenas números" /></div>
+
+    <input type="submit" value="Cadastrar">
+
+  </form>
+
+  <script>
+     function validateForm() {
+
+        let nome = document.forms["formularioCadastro"]["nome"].value;
+        let idade = document.forms["formularioCadastro"]["idade"].value;
+        let email = document.forms["formularioCadastro"]["email"].value;
+        let telefone = document.forms["formularioCadastro"]["telefone"].value;
+
+        if (nome == '') {
+            alert('Preecha o nome');
+            return false;
+        }
+        if (idade == '') {
+            alert('Preencha a idade');
+            return false;
+        } else if (isNaN(idade)) {
+            alert('Valor da idade inválido');
+            return false;
+        } else if (idade < 18) {
+            alert('Usuário deve ser maior de idade');
+            return false;
+        }
+        if (email == '') {
+            alert('Preencha o email');
+            return false;
+        } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){
+            alert('Digite um email válido');
+            return false;
+        }
+        if (telefone == '') {
+            alert('Preencha o telefone');
+            return false;
+        } else if (isNaN(telefone)){
+            alert('No campo telefone, digite apenas números');
+            return false;
+        }
+
+     }
+  </script>
+
+</body>
+</html>
