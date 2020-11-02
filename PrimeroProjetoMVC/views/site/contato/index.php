@@ -1,12 +1,11 @@
-<?php $api_key = 'AIzaSyBBnoZuKqzFditYulTM31WWcacoqfyKW8o';?>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 <script
-  src="https://maps.googleapis.com/maps/api/js?key=<?php $api_key; ?>&callback=initMap&libraries=&v=weekly"
+  src="https://maps.googleapis.com/maps/api/js?key=API_KEY&callback=initMap&libraries=&v=weekly"
   defer
 ></script>
 <script type="text/javascript" src="<?php echo $url; ?>/assets/js/site/maps.js"></script>
 
-<section class="section contato">
+<section class="section contato mt-3">
   <h3 class="mb-3">Contato</h3>
   <div class="container pb-5">
     <div class="row">

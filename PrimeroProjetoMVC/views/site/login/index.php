@@ -1,6 +1,7 @@
-<section class="section contato">
+<section class="section login mt-3 text-center">
     <h3 class="mb-3">Login</h3>
-    <form class="col-8 pb-3 my-lg-5">
+    <div class="col-3"></div>
+    <form class="d-inline-block p-4 m-lg-5 border rounded text-left">
         <div class="form-group">
             <label for="email">Email </label>
             <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Digite seu email">

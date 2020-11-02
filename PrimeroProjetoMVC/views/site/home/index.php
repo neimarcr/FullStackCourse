@@ -1,4 +1,4 @@
-<div class="text-center">
+<div class="text-center ">
   
   <section class="banner">
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">

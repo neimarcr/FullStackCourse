@@ -1,4 +1,4 @@
-<section class="section contato">
+<section class="section contato mt-3">
   <h3 class="mb-3">Registro</h3>
   <div class="container pb-5">
     <div class="row">

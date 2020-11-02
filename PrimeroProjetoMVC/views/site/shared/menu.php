@@ -1,4 +1,4 @@
-<header class="masthead mb-auto p-3">
+<header class="masthead mb-auto p-3 border-bottom">
   <div class="inner container ">
     <h3 class="masthead-brand">Logo</h3>
     <nav class="nav nav-masthead justify-content-center">

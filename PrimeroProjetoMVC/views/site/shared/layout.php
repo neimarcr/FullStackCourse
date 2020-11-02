@@ -23,7 +23,7 @@
 
       <?php require ROOT."/views/site/shared/menu.php" ?>
 
-      <main role="main">
+      <main role="main" >
         <?php require $file; ?>
       </main>
 
