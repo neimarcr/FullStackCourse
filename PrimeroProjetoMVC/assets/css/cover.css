@@ -106,38 +106,51 @@ body {
   color: rgba(255, 255, 255, .5);
 }
 
+
+
 .section2 .imagem{
+    position: relative;
     height: 500px;
     box-shadow: 2px 2px 5px #aaa;
+
 }
 
+  .section2 .imagem h3 {
+    opacity: 0;
+    position: absolute;
+    bottom: 0;
+    background: rgb(0 0 0 );
+    background: rgba(0, 0, 0, 0.5);
+    transition: .5s ease;
+    color: white;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+  }
+
 .section2 .imagem1{
-  background-image: url(../img/img1.jpg);
+  background-image: url(../img/eiffel.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
 }
 
 .section2 .imagem2{
-  background-image: url(../img/img2.jpg);
+  background-image: url(../img/tokyo.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
 }
 
 .section2 .imagem3{
-  background-image: url(../img/img3.jpg);
+  background-image: url(../img/peru.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
 }
 
-.section2 .imagem:hover{
-  -webkit-filter: grayscale(100%);
-  -moz-filter: grayscale(100%);
-  -ms-filter: grayscale(100%);
-  -o-filter: grayscale(100%);
-  filter: grayscale(100%);
+.section2 .imagem:hover h3{
+  opacity: 1;
 }
 
 .section3{
@@ -146,6 +159,7 @@ body {
 
 .section3 p{
   text-align: justify;
+  font-size: large;
 }
 
 .section3, .section4{
