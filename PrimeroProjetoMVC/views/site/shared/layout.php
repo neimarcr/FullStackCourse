@@ -34,7 +34,7 @@
             <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-5 mb-md-0 mb-lg-0 mb-xl-0">
               <h5>Menu</h5>
               <a href="<?php echo $url; ?>/">Home</a>
-              <a href="<?php echo $url; ?>/registro">Registro</a>
+              <a href="<?php echo $url; ?>/cadastro">Cadastro</a>
               <a href="<?php echo $url; ?>/contato">Contato</a>
               <a href="<?php echo $url; ?>/login">Login</a>
             </div>

@@ -1,9 +1,9 @@
 <section class="section contato mt-3">
-  <h3 class="mb-3">Registro</h3>
+  <h3 class="mb-3">Cadastrar usuário</h3>
   <div class="container pb-5">
     <div class="row">
       <div class="col-12 px-5">
-        <form id="form-contato">
+        <form id="form-cadastro">
           <div class="row">
             <div class="col-8">
               <div class="form-group">
@@ -43,8 +43,8 @@
             </div>
             <div class="col-6">
                 <div class="form-group">
-                  <label for="conf_senha">Confirmação de Senha</label>
-                  <input type="password" class="form-control" name="conf_senha" id="conf_senha" placeholder="Informe uma senha">
+                  <label for="confirmarSenha">Confirmação de Senha</label>
+                  <input type="password" class="form-control" name="confirmarSenha" id="confirmarSenha" placeholder="Informe uma senha">
                 </div>
             </div>
           </div> 

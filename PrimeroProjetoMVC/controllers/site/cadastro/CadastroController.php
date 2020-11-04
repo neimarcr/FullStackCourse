@@ -7,14 +7,14 @@
 * @author Code Universe
 *
 **/
-class RegistroController extends Controller
+class CadastroController extends Controller
 {
 
 	public function index()
 	{	
 
 		$this->setLayout('site/shared/layout.php');
-		$this->view('site/registro/index.php');
+		$this->view('site/cadastro/index.php');
 
 	}
 

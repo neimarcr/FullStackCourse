@@ -1,6 +1,6 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 <script
-  src="https://maps.googleapis.com/maps/api/js?key=API_KEY&callback=initMap&libraries=&v=weekly"
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWUgMmnkDtHCb0PDnztrm76svbRyw2Lig&callback=initMap&libraries=&v=weekly"
   defer
 ></script>
 <script type="text/javascript" src="<?php echo $url; ?>/assets/js/site/maps.js"></script>

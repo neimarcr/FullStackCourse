@@ -12,12 +12,15 @@
 $commonRoutes = array(
 	'/'   		=> 'HomeController/index',
 	'contato'  	=> 'ContatoController/index',
-	'registro'  => 'RegistroController/index',
+	'cadastro'  => 'CadastroController/index',
 	'login'		=> 'LoginController/index',
 );
 
 // rotas POST
-$commonPost = array();
+$commonPost = array(
+	'enviar/contato' => "ContatoSubmit/enviar",
+	'enviar/usuario' => "UsuarioSubmit/enviar"
+);
 
 $commonRoutes = array_merge($commonRoutes, $commonPost);
 

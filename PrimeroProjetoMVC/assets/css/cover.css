@@ -54,6 +54,11 @@ body {
 
 .masthead-brand {
   margin-bottom: 0;
+  color: black;
+  /* padding: 2px;
+  border: 2px solid  black;
+  border-radius: 5px;
+  border-collapse: collapse; */
 }
 
 .nav-masthead .nav-link {
