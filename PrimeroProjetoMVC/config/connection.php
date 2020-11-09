@@ -9,7 +9,7 @@
 **/
 
 $config = array(
-	'dsn'      => 'mysql:dbname=csgo;host=127.0.0.1',
+	'dsn'      => 'mysql:dbname=viagens;host=127.0.0.1',
 	'username' => 'root',
 	'password' => null
 );

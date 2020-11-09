@@ -24,6 +24,7 @@ $paths = array(
   'models',
   'models/db',
   'models/user',
+  'models/contato',
 );
 
 /**
