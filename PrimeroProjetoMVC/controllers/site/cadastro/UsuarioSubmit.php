@@ -8,7 +8,6 @@ class UsuarioSubmit extends Controller{
         $fone = $_POST["fone"];
         $email = $_POST["email"];
         $senha = $_POST["senha"];
-        $confirmarSenha = $_POST["confirmarSenha"];
 
         //Regra de negócio
 
