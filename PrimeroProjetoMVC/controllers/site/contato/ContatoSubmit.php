@@ -5,14 +5,14 @@ class ContatoSubmit extends Controller{
     public function enviar(){
 
         $nome       = $_POST["nome"];
-        $emai       = $_POST["email"];
+        $email      = $_POST["email"];
         $fone       = $_POST["fone"];
         $mensagem   = $_POST["mensagem"];
     
 
         //Regra de negócio
         $contatoCrud    = new ContatoCrud;
-        $contato_id     = $contatoCrud->save($nome, $emai, $fone, $mensagem);
+        $contato_id     = $contatoCrud->save($nome, $email, $fone, $mensagem);
 
         echo json_encode(array(
             'resultado' => true,

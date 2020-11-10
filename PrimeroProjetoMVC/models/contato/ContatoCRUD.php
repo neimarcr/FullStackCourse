@@ -11,7 +11,7 @@ class ContatoCrud
     public function save($nome, $email, $fone, $mensagem){
 
         $pdo = array(
-            ':nome'     => $name,
+            ':nome'     => $nome,
             ':email'    => $email,
             ':fone'     => $fone,
             ':mensagem' => $mensagem,
@@ -27,7 +27,7 @@ class ContatoCrud
     public function update($id, $nome, $email, $fone, $mensagem){
         $pdo = array(
             ':id'       => $id,
-            ':nome'     => $name,
+            ':nome'     => $nome,
             ':email'    => $email,
             ':fone'     => $fone,
             ':mensagem' => $mensagem,

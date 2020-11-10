@@ -11,10 +11,12 @@ class UsuarioSubmit extends Controller{
 
         //Regra de negócio
 
+        $usuarioCrud = new CadastroCrud;
+        $usuario_id = $usuarioCrud->save($nome, $cpf, $fone, $email, $senha);
+
         echo json_encode(array(
             'resultado' => true,
-            'id' => 1,
-            'data' => $_POST,
+            'id' => $usuario_id,
             'msg' => "Usuário cadastrado com sucesso",
             'status' => "success"
         ));
