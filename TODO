@@ -1,0 +1,11 @@
+BANCO DE DADOS quiz 
+    TABELA usuario 
+        (idusuarios, nome, email, senha, nivel)
+    TABELA respostas
+        (idrespostas, idusuarios, idalternativas, dataresposta)
+    TABELA quizzes
+        (idquizzes, titulo, idusuarios)
+    TABELA perguntas
+        (idperguntas, titulo, isquizzes)
+    TABELA alternativas
+        (idalternativas, descricao, idperguntas, correta)
