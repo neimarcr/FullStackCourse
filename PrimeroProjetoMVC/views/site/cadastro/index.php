@@ -11,21 +11,10 @@
                 <input type="text" class="form-control" name="nome" id="nome" placeholder="Informe seu nome">
               </div>
             </div>
-            <div class="col-4">
-              <div class="form-group">
-                <label for="cpf">CPF</label>
-                <input type="text" class="form-control" name="cpf" id="cpf" placeholder="Informe CPF">
-              </div>
-            </div>
+ 
           </div>
           
           <div class="row">
-            <div class="col-6">
-              <div class="form-group">
-                <label for="fone">Telefone</label>
-                <input type="text" class="form-control" name="fone" id="fone" placeholder="Informe seu telefone">
-              </div>
-            </div>
             <div class="col-6">
               <div class="form-group">
                 <label for="email">Endereço de E-mail</label>
@@ -48,8 +37,21 @@
                 </div>
             </div>
           </div> 
+
+
+          <div class="row">
+          <div class="form-group">
+            <label for="nivel">Nivel do usuário</label>
+            <select name="nivel" id="nivel" class="form-control">
+              <option value="admin">Admin</option>
+              <option value="guest">Convidado</option>
+            </select>
+          </div>
+          </div>
         
         </form>
+
+        
         <div class="text-center">
              <button type="button" class="btn btn-secondary" id="btn-enviar-usuario">Enviar</button>
         </div>

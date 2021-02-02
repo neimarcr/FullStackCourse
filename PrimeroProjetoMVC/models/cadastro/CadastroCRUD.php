@@ -8,20 +8,19 @@ class CadastroCrud
         $this->pdoCrud = new PDOCrud;
     }
 
-    public function save($nome, $cpf, $fone, $email, $senha)
+    public function save($nome, $email, $senha, $nivel)
     {
         $pdo = array(
             ':nome'     => $nome,
-            ':cpf'      => $cpf,
-            ':fone'     => $fone,
             ':email'    => $email,
             ':senha'    => $senha,
+            ':nivel'    => $nivel,
         );
 
-        $colunas = "nome, cpf, fone, email, senha";
-        $valores = ":nome, :cpf, :fone, :email, :senha";
+        $colunas = "nome, email, senha, nivel";
+        $valores = ":nome, :email, :senha, :nivel";
 
-        return $this->pdoCrud->insert("usuario", $colunas, $valores, $pdo);
+        return $this->pdoCrud->insert("usuarios", $colunas, $valores, $pdo);
     }
 
     public function update($id, $nome, $cpf, $fone, $email, $senha)

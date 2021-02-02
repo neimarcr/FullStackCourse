@@ -42,7 +42,10 @@
 			data: form
 		}).done(retorno => {
 			if (retorno.resultado == true){
-				swal("Sucesso", retorno.msg, retorno.status);
+				swal("Sucesso", retorno.msg, retorno.status)
+				.then(() => {
+					document.location.reload;
+				});
 			} else {
 				swal("Aviso", "Erro ao cadastrar o usuário", "error");
 			}
@@ -77,22 +80,12 @@
 
 	function verificarFormCadastro() {
 		var nome = $('#form-cadastro #nome').val();
-		var cpf = $('#form-cadastro #cpf').val();
-		var fone = $('#form-cadastro #fone').val();
 		var email = $('#form-cadastro #email').val();
 		var senha = $('#form-cadastro #senha').val();
 		var confirmarSenha = $('#form-cadastro #confirmarSenha').val();
 
 		if(nome == ''){
 			swal("Aviso", "Informe o nome", "warning");
-			return false;
-		}
-		else if (cpf == ''){
-			swal("Aviso", "Informe o cpf", "warning");
-			return false;
-		}
-		else if (fone == ''){
-			swal("Aviso", "Informe o telefone", "warning");
 			return false;
 		}
 		else if (email == '' || !verificarEmail(email)){

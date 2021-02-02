@@ -4,15 +4,14 @@ class UsuarioSubmit extends Controller{
 
     public function enviar(){
         $nome = $_POST["nome"];
-        $cpf = $_POST["cpf"];
-        $fone = $_POST["fone"];
         $email = $_POST["email"];
-        $senha = $_POST["senha"];
+        $senha = sha1($_POST["senha"]);
+        $nivel = $_POST["nivel"];
 
         //Regra de negócio
 
         $usuarioCrud = new CadastroCrud;
-        $usuario_id = $usuarioCrud->save($nome, $cpf, $fone, $email, $senha);
+        $usuario_id = $usuarioCrud->save($nome, $email, $senha, $nivel);
 
         echo json_encode(array(
             'resultado' => true,

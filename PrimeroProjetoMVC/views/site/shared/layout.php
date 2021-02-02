@@ -72,5 +72,6 @@
     <script type="text/javascript" src="<?php echo $url; ?>/assets/libs/bootstrap/bootstrap.min.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script type="text/javascript" src="<?php echo $url; ?>/assets/js/site/site.js"></script>
+    <script src="<?= $url ?>/assets/js/site/login.js"></script>
   </body>
 </html>
