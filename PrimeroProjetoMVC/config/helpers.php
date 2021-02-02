@@ -18,5 +18,7 @@ elseif($env == "prod"){
 }
 
 return array(
-	'URLHelper' 	=> new URLHelper(),
+	'URLHelper' 	=> new URLHelper,
+	'UserSession' 	=> new UserSession,
+	'DateConverter' => new DateConverter,
 );

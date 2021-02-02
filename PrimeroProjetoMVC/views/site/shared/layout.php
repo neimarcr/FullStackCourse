@@ -34,7 +34,7 @@
             <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-5 mb-md-0 mb-lg-0 mb-xl-0">
               <h5>Menu</h5>
               <a href="<?php echo $url; ?>/">Home</a>
-              <a href="<?php echo $url; ?>/cadastro">Cadastro</a>
+              <a href="<?php echo $url; ?>/usuario">Usuário</a>
               <a href="<?php echo $url; ?>/contato">Contato</a>
               <a href="<?php echo $url; ?>/login">Login</a>
             </div>
@@ -72,5 +72,6 @@
     <script type="text/javascript" src="<?php echo $url; ?>/assets/libs/bootstrap/bootstrap.min.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script type="text/javascript" src="<?php echo $url; ?>/assets/js/site/site.js"></script>
+    <script type="text/javascript" src="<?php echo $url; ?>/assets/js/site/login.js"></script>
   </body>
 </html>

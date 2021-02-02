@@ -18,14 +18,17 @@ $paths = array(
   'controllers',
   'controllers/site/contato',
   'controllers/site/home',
-  'controllers/site/cadastro',
+  'controllers/site/usuario',
   'controllers/site/login',
+  'controllers/sistema/dashboard',
+  'controllers/sistema/tarefas',
   'helpers',
   'models',
   'models/db',
   'models/user',
   'models/contato',
-  'models/cadastro',
+  'models/usuario',
+  'models/login',
 );
 
 /**

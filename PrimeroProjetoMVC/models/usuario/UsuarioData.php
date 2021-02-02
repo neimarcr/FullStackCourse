@@ -1,6 +1,6 @@
 <?php
 
-class CadastroData
+class UsuarioData
 {
     private $pdoQuery;
 
@@ -19,7 +19,7 @@ class CadastroData
     {
         $pdo = array(":id" => $id);
 
-        $sql = "SELECT FROM usuario WHERE id = :id";
+        $sql = "SELECT FROM usuario WHERE usuario_id = :id";
 
         return $this->pdoQuery->fetch($sql, $pdo);
     }

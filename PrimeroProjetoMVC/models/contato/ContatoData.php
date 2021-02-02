@@ -19,10 +19,10 @@ class ContatoData
     public function getContato($id)
     {
         $pdo = array(
-            ":id" => $id
+            ":contato_id" => $id
         );
 
-        $sql = "SELECT * FROM contato WHERE id = :id";
+        $sql = "SELECT * FROM contato WHERE contato_id = :contato_id";
 
         return $this->pdoQuery->fetch($sql, $pdo);
     }

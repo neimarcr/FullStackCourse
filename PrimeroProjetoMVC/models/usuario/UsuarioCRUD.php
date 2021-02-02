@@ -1,6 +1,6 @@
 <?php
 
-class CadastroCrud
+class UsuarioCRUD
 {
     private $pdoCrud;
 
@@ -15,7 +15,7 @@ class CadastroCrud
             ':cpf'      => $cpf,
             ':fone'     => $fone,
             ':email'    => $email,
-            ':senha'    => $senha,
+            ':senha'    => sha1($senha),
         );
 
         $colunas = "nome, cpf, fone, email, senha";
@@ -27,17 +27,17 @@ class CadastroCrud
     public function update($id, $nome, $cpf, $fone, $email, $senha)
     {
         $pdo = array(
-            ':id'       =>$id,
-            ':nome'     => $nome,
-            ':cpf'      => $cpf,
-            ':fone'     => $fone,
-            ':email'    => $email,
-            ':senha'    => $senha,
+            ':usuario_id'   => $id,
+            ':nome'         => $nome,
+            ':cpf'          => $cpf,
+            ':fone'         => $fone,
+            ':email'        => $email,
+            ':senha'        => $senha,
         );
 
-        $valores = "id=:id, nome=:nome, cpf=:cpf, fone=:fone, email=:email, senha=:senha";
+        $valores = "nome=:nome, cpf=:cpf, fone=:fone, email=:email, senha=:senha";
 
-        $where = "WHERE id = :id";
+        $where = "WHERE usuario_id = :usuario_id";
 
         return $this->pdoCrud->update("usuario", $valores, $where, $pdo);
     }

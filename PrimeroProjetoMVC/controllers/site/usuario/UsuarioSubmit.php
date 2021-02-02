@@ -11,7 +11,7 @@ class UsuarioSubmit extends Controller{
 
         //Regra de negócio
 
-        $usuarioCrud = new CadastroCrud;
+        $usuarioCrud = new UsuarioCRUD;
         $usuario_id = $usuarioCrud->save($nome, $cpf, $fone, $email, $senha);
 
         echo json_encode(array(

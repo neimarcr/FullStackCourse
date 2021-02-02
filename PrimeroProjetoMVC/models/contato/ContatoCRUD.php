@@ -26,16 +26,16 @@ class ContatoCrud
 
     public function update($id, $nome, $email, $fone, $mensagem){
         $pdo = array(
-            ':id'       => $id,
-            ':nome'     => $nome,
-            ':email'    => $email,
-            ':fone'     => $fone,
-            ':mensagem' => $mensagem,
+            ':contato_id' => $id,
+            ':nome'       => $nome,
+            ':email'      => $email,
+            ':fone'       => $fone,
+            ':mensagem'   => $mensagem,
         );
 
         $valores = "nome=:nome, email=:email, fone=:fone, mensagem=:mensagem";
 
-        $where = "WHERE id = :id";
+        $where = "WHERE contato_id = :contato_id";
 
         return $this->pdoCrud->update("contato", $valores, $where, $pdo);
     }

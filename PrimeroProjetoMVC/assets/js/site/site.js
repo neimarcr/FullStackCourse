@@ -75,7 +75,7 @@
 		return true;
 	}
 
-	function verificarFormCadastro() {
+	function verificarFormUsuario() {
 		var nome = $('#form-cadastro #nome').val();
 		var cpf = $('#form-cadastro #cpf').val();
 		var fone = $('#form-cadastro #fone').val();
@@ -123,7 +123,7 @@
 		});
 
 		$("#btn-enviar-usuario").click(function () {
-			if(verificarFormCadastro()){
+			if(verificarFormUsuario()){
 				enviarUsuario();
 			}
 		})
