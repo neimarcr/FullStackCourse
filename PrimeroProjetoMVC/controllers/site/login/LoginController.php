@@ -12,7 +12,7 @@ class LoginController extends Controller
 
 	public function index()
 	{	
-		// if ($this->helpers['UserSession']->has()){
+		// if ($this->userSession->has()){
 
 		// };
 		$this->setLayout('site/shared/layout.php');
@@ -35,7 +35,7 @@ class LoginController extends Controller
 
 	public function sair()
 	{
-		$this->helpers['UserSession']->deleteUser();
+		$this->userSession->deleteUser();
 
 		$this->setLayout('site/shared/layout.php');
 		$this->view('site/login/index.php');

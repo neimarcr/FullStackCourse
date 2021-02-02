@@ -13,7 +13,7 @@ class TarefasSubmit extends Controller
 	public function index()
 	{		
 
-		if($this->helpers['UserSession']->get("usuario_id")){
+		if($this->userSession->get("usuario_id")){
 
 			$this->setLayout('sistema/shared/layout.php');
 			$this->view('sistema/dashboard/index.php');

@@ -10,10 +10,18 @@
 class DashboardController extends Controller
 {
 
+	public function __construct(array $helpers = array())
+	{
+		parent::__construct($helpers);
+		
+	}
+
+
 	public function index()
 	{		
 
-		if($this->helpers['UserSession']->get("usuario_id")){
+
+		if($this->userSession->has()){
 
 			$this->setLayout('sistema/shared/layout.php');
 			$this->view('sistema/dashboard/index.php');

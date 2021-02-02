@@ -13,7 +13,7 @@ class TarefasController extends Controller
 	public function index()
 	{		
 
-		if($this->helpers['UserSession']->get("id")){
+		if($this->userSession->get("id")){
 
 			$this->setLayout('sistema/shared/layout.php');
 			$this->view('sistema/tarefas/index.php');
@@ -30,7 +30,7 @@ class TarefasController extends Controller
 
 	public function adicionar()
 	{
-		if($this->helpers['UserSession']->get("usuario_id")){
+		if($this->userSession->get("usuario_id")){
 
 			$this->setLayout('sistema/shared/layout.php');
 			$this->view('sistema/tarefas/adicionar.php');
@@ -45,7 +45,7 @@ class TarefasController extends Controller
 
 	public function editar()
 	{
-		if($this->helpers['UserSession']->get("usuario_id")){
+		if($this->userSession->get("usuario_id")){
 
 			$this->setLayout('sistema/shared/layout.php');
 			$this->view('sistema/tarefas/editar.php');

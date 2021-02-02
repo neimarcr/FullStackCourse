@@ -44,7 +44,7 @@
 			if (retorno.resultado == true){
 				swal("Sucesso", retorno.msg, retorno.status)
 				.then(() => {
-					document.location.reload;
+					document.location = 'login';
 				});
 			} else {
 				swal("Aviso", "Erro ao cadastrar o usuário", "error");

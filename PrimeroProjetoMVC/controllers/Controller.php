@@ -13,12 +13,13 @@ abstract class Controller
 
 	private $layout;
 	protected $helpers;
+	protected $userSession;
 
 	public function __construct(array $helpers = array())
 	{
 
 		$this->helpers = $helpers;
-
+		$this->userSession = new UserSession;
 	}
 
 	protected function setLayout($filename)

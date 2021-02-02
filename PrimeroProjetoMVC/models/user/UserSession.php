@@ -36,12 +36,8 @@ class UserSession
 
 		$this->control();
 
-		if(isset($_SESSION['User'])){
-			return true;
-		}
-
-		return false;
-
+		return isset($_SESSION['User']);
+		
 	}
 
 	public function get($info)
