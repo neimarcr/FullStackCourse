@@ -19,7 +19,7 @@ abstract class Controller
 	{
 
 		$this->helpers = $helpers;
-		$this->userSession = new UserSession;
+		$this->userSession = new UserSession();
 	}
 
 	protected function setLayout($filename)
@@ -43,6 +43,21 @@ abstract class Controller
 
 		require $file;
 
+	}
+
+	protected function render($view){
+
+		if($this->userSession->has()){
+
+			$this->setLayout('sistema/shared/layout.php');
+			$this->view('sistema/dashboard/index.php');
+
+		}else{
+
+			$this->setLayout('site/shared/layout.php');
+			$this->view('site/'.$view.'/index.php');
+
+		}
 	}
 
 	protected function getId(array $params)

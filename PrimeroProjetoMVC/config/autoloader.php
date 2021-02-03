@@ -16,7 +16,6 @@
 **/
 $paths = array(
   'controllers',
-  'controllers/site/contato',
   'controllers/site/home',
   'controllers/site/cadastro',
   'controllers/site/login',
@@ -26,9 +25,9 @@ $paths = array(
   'models',
   'models/db',
   'models/user',
-  'models/contato',
   'models/cadastro',
-  'models/login'
+  'models/login',
+  'models/quiz',
 );
 
 /**

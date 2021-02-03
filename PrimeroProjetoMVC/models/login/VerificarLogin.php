@@ -15,12 +15,17 @@ class VerificarLogin
     {
         $senha = sha1($senha);
 
-        $data = $this->pdoQuery->fetch("SELECT * FROM usuarios WHERE email = '$email' AND senha = '$senha' LIMIT 1");
-    
-        if (count($data) > 0){
+        $data = $this->pdoQuery->fetch("SELECT * FROM usuarios WHERE email = :email AND senha = :senha LIMIT 1", [
+            ":email" => $email,
+            ":senha" => $senha,
+        ]);
+
+
+        
+        if (is_array($data) && count($data) > 0){
 
             $this->userSession->saveUser(array(
-                'idusuarios' => $data['idusuarios'],
+                'id' => $data['idusuarios'],
                 'nome'       => $data['nome'],
                 'email'      => $data['email'],
                 'senha'      => $data['senha'],

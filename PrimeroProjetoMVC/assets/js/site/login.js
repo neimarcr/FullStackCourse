@@ -13,16 +13,16 @@
 
     async function verificarLoginDB() {
 
+        let data = new FormData();
+        data.append('email', $('#form-login #email').val());
+        data.append('senha', $('#form-login #senha').val());
 
         const response = await fetch('verificar/login', {
             method: "POST",
-            body: JSON.stringify(
-                {
-                    email: $('#form-login #email').val(),
-                    senha: $('#form-login #senha').val(),
-                }
-            )
+            body: data
         })
+
+        
 
         let resposta = await response.json();
 
@@ -40,7 +40,7 @@
 
         // });
         
-        console.log(resposta);
+        
 
         return resposta.resultado;
     }
@@ -66,15 +66,20 @@
 
 		$("#btn-login").click(function() {
 
-		 	if(verificarLoginJS() && verificarLoginDB()){
+            verificarLoginDB()
+            .then((x) => {
+                if(verificarLoginJS() && x){
   
-                window.location = "dashboard";
+                    window.location = "dashboard";
+    
+                 } else {
 
-		 	} else {
+                    document.getElementById("login-error").classList.remove('d-none');
+    
+                 }
+            })
 
-                $('.error').html("Senha ou email está incorreto").fadeIn();
-
-             }
+		 	
 		});
     }
 

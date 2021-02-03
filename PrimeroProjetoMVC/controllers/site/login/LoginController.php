@@ -12,12 +12,20 @@ class LoginController extends Controller
 
 	public function index()
 	{	
-		// if ($this->userSession->has()){
+		// if($this->userSession->has()){
 
-		// };
-		$this->setLayout('site/shared/layout.php');
-		$this->view('site/login/index.php');
+		// 	$this->setLayout('sistema/shared/layout.php');
+		// 	$this->view('sistema/dashboard/index.php');
 
+		// }else{
+
+		// 	$this->setLayout('site/shared/layout.php');
+		// 	$this->view('site/login/index.php');
+
+		// }
+
+
+		$this->render("login");
 	}
 
 	public function verificarLogin()

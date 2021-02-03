@@ -5,12 +5,12 @@ class CadastroData
     private $pdoQuery;
 
     function __constructor(){
-        $this->$pdoQuery = new PDOQuery;
+        $this->pdoQuery = new PDOQuery;
     }
 
     public function listar()
     {
-        $sql = "SELECT * FROM usuario";
+        $sql = "SELECT * FROM usuarios";
 
         return $this->pdoQuery->fetchAll($sql);
     }
@@ -19,7 +19,7 @@ class CadastroData
     {
         $pdo = array(":id" => $id);
 
-        $sql = "SELECT FROM usuario WHERE id = :id";
+        $sql = "SELECT FROM usuarios WHERE id = :id";
 
         return $this->pdoQuery->fetch($sql, $pdo);
     }

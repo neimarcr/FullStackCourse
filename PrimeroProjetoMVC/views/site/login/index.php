@@ -11,6 +11,9 @@
             <label for="senha">Senha</label>
             <input type="password" class="form-control" id="senha" placeholder="Digite sua senha">
         </div>
-        <button type="button" class="btn btn-primary" id="btn-login">Login</button>
+        <div class="alert alert-danger d-none"  id="login-error" role="alert" >
+            Senha ou email está incorreto
+        </div>
+        <button type="button" class="btn btn-primary" id="btn-login" >Login</button>
     </form>
 </section>

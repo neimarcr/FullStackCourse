@@ -4,7 +4,7 @@
 *
 * Classe que manipula os dados do usuário na sessão.
 *
-* @author Emprezaz.com
+* 
 * 
 **/
 class UserSession
