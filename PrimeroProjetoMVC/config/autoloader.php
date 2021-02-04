@@ -20,7 +20,7 @@ $paths = array(
   'controllers/site/cadastro',
   'controllers/site/login',
   'controllers/sistema/dashboard',
-  'controllers/sistema/tarefas',
+  'controllers/sistema/criar_quiz',
   'helpers',
   'models',
   'models/db',

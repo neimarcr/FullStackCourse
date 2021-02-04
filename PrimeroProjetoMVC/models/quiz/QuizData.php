@@ -4,15 +4,16 @@ class QuizData
 {
     private $pdoQuery;
 
-    function __constructor(){
+    function __construct(){
         $this->pdoQuery = new PDOQuery;
     }
 
-    public function listar($id)
-    {
-        $sql = "SELECT * FROM quizzes WHERE id = :id";
 
-        return $this->pdoQuery->fetchAll($sql, [":id" => $id]);
+    public function listar()
+    {
+        $sql = "SELECT * FROM quizzes";
+
+        return $this->pdoQuery->fetchAll($sql);
     }
 
 }

@@ -4,7 +4,7 @@
 *
 * Controller do dashboard.
 *
-* @author Code Universe
+* 
 *
 **/
 class TarefasController extends Controller

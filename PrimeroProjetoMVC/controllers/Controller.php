@@ -14,10 +14,11 @@ abstract class Controller
 	private $layout;
 	protected $helpers;
 	protected $userSession;
+	protected $dados;
 
 	public function __construct(array $helpers = array())
 	{
-
+		$this->dados = new stdClass();
 		$this->helpers = $helpers;
 		$this->userSession = new UserSession();
 	}
@@ -27,6 +28,13 @@ abstract class Controller
 
 		$this->layout = $filename;
 
+	}
+
+	protected function getQuizzes()
+	{
+		$quizClass = new QuizData();
+
+		$this->dados->quizzes = $quizClass->listar();
 	}
 
 	protected function view($filename, array $data = array())
@@ -48,6 +56,8 @@ abstract class Controller
 	protected function render($view){
 
 		if($this->userSession->has()){
+
+			$this->getQuizzes();
 
 			$this->setLayout('sistema/shared/layout.php');
 			$this->view('sistema/dashboard/index.php');

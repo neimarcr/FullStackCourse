@@ -44,7 +44,7 @@ class UserSession
 	{
 
 		$this->control();
-
+		
 		if(isset($_SESSION['User'][$info])){
 			return $_SESSION['User'][$info];
 		}

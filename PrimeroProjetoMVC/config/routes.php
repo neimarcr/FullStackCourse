@@ -15,12 +15,14 @@ $commonRoutes = array(
 	'login'			=> 'LoginController/index',
 	'sair'			=> 'LoginController/sair',
 	'dashboard' 	=> 'DashboardController/index',
+	'criar_quiz'	=> 'CriarQuizController/index',
 );
 
 // rotas POST
 $commonPost = array(
-	'enviar/usuario' => "UsuarioSubmit/enviar",
-	'verificar/login' => "LoginController/verificarLogin"
+	'enviar/usuario' 	=> "UsuarioSubmit/enviar",
+	'verificar/login' 	=> "LoginController/verificarLogin",
+	'salvar/quiz'  		=> "CriarQuizController/criarQuiz"
 );
 
 $commonRoutes = array_merge($commonRoutes, $commonPost);

@@ -23,12 +23,11 @@ class DashboardController extends Controller
 
 		if($this->userSession->has()){
 
-			$quiz = new QuizData();
 
-			$user_quizzes = $quiz->listar($this->userSession->get("id"));
+			$this->getQuizzes();
 
 			$this->setLayout('sistema/shared/layout.php');
-			$this->view('sistema/dashboard/index.php', $user_quizzes);
+			$this->view('sistema/dashboard/index.php');
 
 		}else{
 

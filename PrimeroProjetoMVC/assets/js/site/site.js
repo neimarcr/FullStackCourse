@@ -2,7 +2,7 @@
 *
 * Script de perfil
 *
-* @author Code Universe
+* 
 *
 **/
 (function($, URL){

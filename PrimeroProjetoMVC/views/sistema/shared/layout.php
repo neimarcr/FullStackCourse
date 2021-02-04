@@ -8,8 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-
-    <title>Dashboard Template for Bootstrap</title>
+    <script src="<?= $url; ?>/assets/libs/vue-js/vue.js"></script>
+    <title>Quiz</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="<?php echo $url; ?>/assets/libs/bootstrap/bootstrap.css">
@@ -38,19 +38,18 @@
 		        <li class="nav-item">
 		          <a class="nav-link" href="<?php echo $url ?>/dashboard">
 		            <span data-feather="home"></span>
-		            Dashboard <span class="sr-only">(current)</span>
+		            Quizzes <span class="sr-only">(current)</span>
 		          </a>
 		        </li>
-		        <li class="nav-item">
-		          <a class="nav-link" href="<?php echo $url ?>/tarefas">
+		        <li class="nav-item" id="teste">
+		          <a class="nav-link" href="<?php echo $url ?>/criar_quiz">
 		            <span data-feather="file"></span>
-		            Tarefas
+		            Criar Quiz
 		          </a>
 		        </li>
 		      </ul>
 		    </div>
 		  </nav>
-
 		  <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
 		  	 <?php require $file; ?>
 		  </main>
@@ -61,11 +60,10 @@
       var URL = "<?php echo $url ?>";
     </script>
     <script type="text/javascript" src="<?php echo $url; ?>/assets/libs/jquery/jquery-3.5.1.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
     <script type="text/javascript" src="<?php echo $url; ?>/assets/libs/popper/popper.min.js"></script>
     <script type="text/javascript" src="<?php echo $url; ?>/assets/libs/bootstrap/bootstrap.min.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <script type="text/javascript" src="<?php echo $url; ?>/assets/js/sistema/tarefas.js"></script>
+    <script type="text/javascript" src="<?php echo $url; ?>/assets/js/sistema/criar_quiz.js"></script>
 
     <!-- Icons -->
     <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
