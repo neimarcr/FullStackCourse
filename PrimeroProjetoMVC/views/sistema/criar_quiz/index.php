@@ -6,7 +6,7 @@
     <label  for="tituloQuiz"><strong> Titulo do Quiz</strong></label>
     <input class="form-control" v-model="titulo" type="text" id="tituloQuiz" name="tituloQuiz">
 </div>
-    <div class="border px-5 py-3 "
+    <div class="border px-5 py-3"
     v-for="(applicant, counter) in applicants"
     v-bind:key="counter">
     {{ teste2 }}
