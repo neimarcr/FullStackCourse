@@ -10,9 +10,6 @@
 
 new Vue({
     el: '#addPergunta',
-    props: {
-        msg: String,
-    },
     data() {
         return {
             titulo: '',
@@ -24,6 +21,7 @@ new Vue({
                 alternativa3: '',
                 alternativa4: '',
                 alternativa5: '',
+                correta: '',
             }]
         }
     },
@@ -36,6 +34,7 @@ new Vue({
                 alternativa3: '',
                 alternativa4: '',
                 alternativa5: '',
+                correta: '',
             })
         },
         salvarQuiz(){
@@ -49,9 +48,13 @@ new Vue({
                 method: 'POST',
                 body: data,
             })
-            .then(
-
-            )
+            .then((resultado) => {
+                if (resultado.resposta){
+                    swal("Sucesso", "quiz cadastrado com sucesso", "success");
+                } else {
+                    swal("Erro", "erro ao cadastrar quiz: " + resultado.erro, "error");
+                }
+            })
         }
     },
     

@@ -22,7 +22,8 @@ $commonRoutes = array(
 $commonPost = array(
 	'enviar/usuario' 	=> "UsuarioSubmit/enviar",
 	'verificar/login' 	=> "LoginController/verificarLogin",
-	'salvar/quiz'  		=> "CriarQuizController/criarQuiz"
+	'salvar/quiz'  		=> "CriarQuizController/criarQuiz",
+	'deletar/quiz'		=> "CriarQuizController/deletarQuiz"
 );
 
 $commonRoutes = array_merge($commonRoutes, $commonPost);

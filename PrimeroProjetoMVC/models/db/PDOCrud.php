@@ -11,7 +11,7 @@
 class PDOCrud
 {
 
-	private $pdo;
+	public $pdo;
 
 	public function __construct($configFile = null)
 	{

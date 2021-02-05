@@ -11,22 +11,44 @@ class QuizCrud  {
         $this->pdoQuery = new PDOQuery();
     }
 
-    public function save(string $titulo, int $idusuarios, array $perguntas, array $alternativas)
+    public function save(array $quizzes, int $idusuarios)
     {
+
+        $titulo = $quizzes['titulo'];
+
+        $perguntas = $quizzes['perguntas'];
+
+        $this->pdoCrud->pdo->beginTransaction();
+
         $idTitulo = $this->salvarTitulo($titulo, $idusuarios);
 
         if (isset($idTitulo)){
 
-            foreach($perguntas as $pergunta){
-                $idPergunta = $this->salvarPergunta($pergunta, $idTitulo);
-                if (isset($idPergunta)){
 
-                    foreach($alternativas as $alternativa => $resposta){
-                        $this->salvarAlternativa($alternativa, (int)$idPergunta, (int)$resposta);
+
+            foreach($perguntas as $index => $pergunta){
+                // var_dump($pergunta);
+                $idPergunta = $this->salvarPergunta($pergunta['pergunta'], $idTitulo);
+                $resposta = $pergunta['correta'];
+                if (isset($idPergunta)){
+                    try {
+                        $this->salvarAlternativa($pergunta['alternativa1'], (int)$idPergunta, $resposta == 'alternativa1' ? 1 : 0);
+                        $this->salvarAlternativa($pergunta['alternativa2'], (int)$idPergunta, $resposta == 'alternativa2' ? 1 : 0);
+                        $this->salvarAlternativa($pergunta['alternativa3'], (int)$idPergunta, $resposta == 'alternativa3' ? 1 : 0);
+                        $this->salvarAlternativa($pergunta['alternativa4'], (int)$idPergunta, $resposta == 'alternativa4' ? 1 : 0);
+                        $this->salvarAlternativa($pergunta['alternativa5'], (int)$idPergunta, $resposta == 'alternativa5' ? 1 : 0);
+
+                    }
+                    catch (Throwable $e) {
+                        $this->pdoCrud->pdo->rollBack();
+                        return $e;
                     }
                 }
             }
+            $this->pdoCrud->pdo->commit();
+            return true;
         }
+
     }
 
 
@@ -64,11 +86,14 @@ class QuizCrud  {
             ':correta' => $correta,
         ];
 
-        $colunas = "descricao, idpergunta, correta";
+        $colunas = "descricao, idperguntas, correta";
         $valores = ":descricao, :idpergunta, :correta";
 
         return $this->pdoCrud->insert("alternativas", $colunas, $valores, $pdo);
     }
 
-
+    public function deletarQuiz($id)
+    {
+        return $this->pdoCrud->delete("quizzes", $id);
+    }
 }

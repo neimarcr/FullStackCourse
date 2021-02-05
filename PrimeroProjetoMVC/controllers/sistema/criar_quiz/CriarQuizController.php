@@ -34,11 +34,22 @@ class CriarQuizController extends Controller
 
 			$quiz = json_decode($_POST['dados'], true);
 
-			var_dump($quiz);
+			$idUsuario = $this->userSession->get('id');
 
-			$this->userSession->get('id');
+			$quizCrud = new QuizCrud();
 
-			
+			$resposta = $quizCrud->save($quiz, $idUsuario);
+
+			if ($resposta === true){
+			return json_encode([
+				"resposta" => $resposta
+			]);
+			} else {
+				return json_encode([
+					"resposta" => false,
+					"erro" => $resposta->getMessage(),
+				]);
+			}
 
 		}else{
 
@@ -46,6 +57,19 @@ class CriarQuizController extends Controller
 			$this->view('site/error/index.php');
 
 		}
+	}
+
+	public function deletarQuiz()
+	{
+		$dados = json_decode($_POST['dados'], true);
+
+		var_dump($dados);
+
+		$id_quiz = $dados['id_quiz'];
+
+		$quizCrud = new QuizCrud();
+
+		$quizCrud->deletarQuiz($id_quiz);
 	}
 
 }

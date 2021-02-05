@@ -17,29 +17,40 @@
 
         <div class="form-group">
             <label  for="alternativa1">Alternativa 1</label>
-            <input class="form-control alternativaQuiz" type="text" id="alternativa1" name="alternativa1" v-model="applicant.alternativa1">
+            <input class="form-control alternativaQuiz" type="text" id="alternativa1"  v-model="applicant.alternativa1">
         </div>
 
         <div class="form-group">
             <label  for="alternativa2">Alternativa 2</label>
-            <input class="form-control alternativaQuiz" type="text" id="alternativa2" name="alternativa2" v-model="applicant.alternativa2">
+            <input class="form-control alternativaQuiz" type="text" id="alternativa2"  v-model="applicant.alternativa2">
         </div>
          
         <div class="form-group">
             <label  for="alternativa3">Alternativa 3</label>
-            <input class="form-control alternativaQuiz" type="text" id="alternativa3" name="alternativa3" v-model="applicant.alternativa3">
+            <input class="form-control alternativaQuiz" type="text" id="alternativa3"  v-model="applicant.alternativa3">
         </div>
 
         <div class="form-group">
             <label for="alternativa4">Alternativa 4</label>
-            <input class="form-control alternativaQuiz" type="text" id="alternativa4" name="alternativa4" v-model="applicant.alternativa4">
+            <input class="form-control alternativaQuiz" type="text" id="alternativa4"  v-model="applicant.alternativa4">
         </div>
 
         <div class="form-group">
             <label  for="alternativa5">Alternativa 5</label>
-            <input class="form-control alternativaQuiz" type="text" id="alternativa5" name="alternativa5" v-model="applicant.alternativa5">
+            <input class="form-control alternativaQuiz" type="text" id="alternativa5"  v-model="applicant.alternativa5">
         </div>
         
+        <div class="form-group">
+        <label for="correta">Qual a alternativa correta?</label>
+        <select name="correta" id="correta" class="form-control" v-model="applicant.correta">
+            <option value="alternativa1">Alternativa 1</option>
+            <option value="alternativa2">Alternativa 2</option>
+            <option value="alternativa3">Alternativa 3</option>
+            <option value="alternativa4">Alternativa 4</option>
+            <option value="alternativa5">Alternativa 5</option>
+        </select>
+        </div>
+
     </div>
     <div class="p-3 m-1">
     <div class="row mb-2">
