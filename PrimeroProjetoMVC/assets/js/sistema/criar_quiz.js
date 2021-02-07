@@ -49,8 +49,15 @@ new Vue({
                 body: data,
             })
             .then((resultado) => {
-                if (resultado.resposta){
-                    swal("Sucesso", "quiz cadastrado com sucesso", "success");
+                return resultado.json();
+            })
+            .then( retorno => {
+
+                if (retorno.resposta == true){
+                    swal("Sucesso", "quiz cadastrado com sucesso", "success")
+                    .then(() => {
+                        document.location = "dashboard";
+                    })
                 } else {
                     swal("Erro", "erro ao cadastrar quiz: " + resultado.erro, "error");
                 }

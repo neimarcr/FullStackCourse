@@ -94,6 +94,6 @@ class QuizCrud  {
 
     public function deletarQuiz($id)
     {
-        return $this->pdoCrud->delete("quizzes", $id);
+        return $this->pdoCrud->delete("quizzes", "idquizzes", $id);
     }
 }

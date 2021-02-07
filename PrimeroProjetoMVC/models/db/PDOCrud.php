@@ -41,10 +41,10 @@ class PDOCrud
 
 	}
 
-	public function delete($table, $id)
+	public function delete($table, $column, $id)
 	{
 
-		$stmt   = $this->pdo->prepare('DELETE FROM ' . $table . ' WHERE ID = :id');
+		$stmt   = $this->pdo->prepare('DELETE FROM ' . $table . ' WHERE ' . $column . ' = :id');
 		$result = $stmt->execute(array(
 			':id' => $id
 		));

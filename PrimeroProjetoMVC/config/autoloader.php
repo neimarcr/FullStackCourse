@@ -21,6 +21,7 @@ $paths = array(
   'controllers/site/login',
   'controllers/sistema/dashboard',
   'controllers/sistema/criar_quiz',
+  'controllers/sistema/jogar_quiz',
   'helpers',
   'models',
   'models/db',

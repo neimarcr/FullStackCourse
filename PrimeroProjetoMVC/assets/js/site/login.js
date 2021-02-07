@@ -26,22 +26,6 @@
 
         let resposta = await response.json();
 
-        // $.ajax({
-        //     url: 'verificar/login',
-        //     type: 'POST',
-        //     dataType: 'JSON',
-        //     async: false,
-        //     data: {
-        //         email: $('#form-login #email').val(),
-        //         senha: $('#form-login #senha').val(),
-        //     }
-        // }).done(retorno => {
-        //     resultadoLogin = retorno.resultado;
-
-        // });
-        
-        
-
         return resposta.resultado;
     }
     

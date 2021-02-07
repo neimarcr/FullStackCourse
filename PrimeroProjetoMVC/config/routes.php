@@ -15,7 +15,7 @@ $commonRoutes = array(
 	'login'			=> 'LoginController/index',
 	'sair'			=> 'LoginController/sair',
 	'dashboard' 	=> 'DashboardController/index',
-	'criar_quiz'	=> 'CriarQuizController/index',
+	'jogar_quiz'	=> 'JogarQuizController/index'
 );
 
 // rotas POST
@@ -23,6 +23,7 @@ $commonPost = array(
 	'enviar/usuario' 	=> "UsuarioSubmit/enviar",
 	'verificar/login' 	=> "LoginController/verificarLogin",
 	'salvar/quiz'  		=> "CriarQuizController/criarQuiz",
+	'criar_quiz'		=> 'CriarQuizController/index',
 	'deletar/quiz'		=> "CriarQuizController/deletarQuiz"
 );
 

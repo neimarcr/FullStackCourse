@@ -40,15 +40,16 @@ class CriarQuizController extends Controller
 
 			$resposta = $quizCrud->save($quiz, $idUsuario);
 
-			if ($resposta === true){
-			return json_encode([
-				"resposta" => $resposta
-			]);
-			} else {
-				return json_encode([
+
+			if (!($resposta == true)){
+				echo json_encode([
 					"resposta" => false,
-					"erro" => $resposta->getMessage(),
-				]);
+					"erro" => $resposta->getMessage()
+				]);		
+			} else {
+				echo json_encode([
+					"resposta" => true
+				]);	
 			}
 
 		}else{
@@ -63,13 +64,16 @@ class CriarQuizController extends Controller
 	{
 		$dados = json_decode($_POST['dados'], true);
 
-		var_dump($dados);
-
 		$id_quiz = $dados['id_quiz'];
 
 		$quizCrud = new QuizCrud();
 
-		$quizCrud->deletarQuiz($id_quiz);
+		$resposta = $quizCrud->deletarQuiz($id_quiz);
+
+		echo json_encode([
+			"resposta" => $resposta
+		]);
+		
 	}
 
 }

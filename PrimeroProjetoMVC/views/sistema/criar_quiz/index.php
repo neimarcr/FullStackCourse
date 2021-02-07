@@ -9,7 +9,6 @@
     <div class="border px-5 py-3"
     v-for="(applicant, counter) in applicants"
     v-bind:key="counter">
-    {{ teste2 }}
         <div class="form-group ">
             <label  for="perguntaQuiz"><h4>Pergunta {{ counter + 1 }}</h4></label>
             <input class="form-control perguntaQuiz" type="text" id="perguntaQuiz" name="perguntaQuiz" v-model="applicant.pergunta">
