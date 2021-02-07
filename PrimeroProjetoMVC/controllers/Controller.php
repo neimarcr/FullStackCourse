@@ -15,12 +15,14 @@ abstract class Controller
 	protected $helpers;
 	protected $userSession;
 	protected $dados;
+	protected $quizData;
 
 	public function __construct(array $helpers = array())
 	{
 		$this->dados = new stdClass();
 		$this->helpers = $helpers;
 		$this->userSession = new UserSession();
+		$this->quizData = new QuizData();
 	}
 
 	protected function setLayout($filename)
@@ -32,9 +34,8 @@ abstract class Controller
 
 	protected function getQuizzes()
 	{
-		$quizClass = new QuizData();
 
-		$this->dados->quizzes = $quizClass->listar();
+		$this->dados->quizzes = $this->quizData->listar();
 	}
 
 	protected function view($filename, array $data = array())
