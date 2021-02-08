@@ -24,7 +24,8 @@ $commonPost = array(
 	'verificar/login' 	=> "LoginController/verificarLogin",
 	'salvar/quiz'  		=> "CriarQuizController/criarQuiz",
 	'criar_quiz'		=> 'CriarQuizController/index',
-	'deletar/quiz'		=> "CriarQuizController/deletarQuiz"
+	'deletar/quiz'		=> "CriarQuizController/deletarQuiz",
+	'enviar/jogo'		=> "JogarQuizController/enviar"
 );
 
 $commonRoutes = array_merge($commonRoutes, $commonPost);

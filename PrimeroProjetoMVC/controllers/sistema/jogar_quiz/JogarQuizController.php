@@ -21,7 +21,6 @@ class JogarQuizController extends Controller{
                 $idPergunta = $pergunta['idperguntas'];
                 array_push($this->dados->alternativas, $this->quizData->getAlternativasFromIdPergunta((int)$idPergunta));
             }
-            var_dump(count($this->dados->alternativas));
 
 			$this->setLayout('sistema/shared/layout.php');
 			$this->view('sistema/jogar_quiz/index.php');
@@ -32,5 +31,10 @@ class JogarQuizController extends Controller{
 			$this->view('site/error/index.php');
 
 		}
+    }
+
+    public function enviar()
+    {
+        var_dump($_POST);
     }
 }

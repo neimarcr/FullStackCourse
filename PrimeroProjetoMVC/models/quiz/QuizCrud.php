@@ -51,6 +51,11 @@ class QuizCrud  {
 
     }
 
+    public function salvarResposta()
+    {
+        # code...
+    }
+
 
     private function salvarTitulo(string $titulo, int $idusuarios)
     {

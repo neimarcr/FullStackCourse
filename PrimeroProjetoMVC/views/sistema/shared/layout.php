@@ -65,6 +65,7 @@
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script type="text/javascript" src="<?php echo $url; ?>/assets/js/sistema/criar_quiz.js"></script>
     <script type="text/javascript" src="<?php echo $url; ?>/assets/js/sistema/deletar_quiz.js"></script>
+    <script type="text/javascript" src="<?php echo $url; ?>/assets/js/sistema/enviar_resposta.js"></script>
 
     <!-- Icons -->
     <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
